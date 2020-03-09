@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "socrse_subscription"
+version = "0.1.0"
+description = ""
+license = "MIT"
+readme = "README.rst"
+authors = ["Matt Williams <matt@milliams.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+stripe = "^2.43.0"
+pandas = "^1.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+mypy = "^0.761"
+flake8 = "^3.7.9"
+
+[tool.poetry.scripts]
+add = 'socrse_subscription:add_subscription'
+get = 'socrse_subscription:get_subscriptions'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
